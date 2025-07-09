@@ -23,3 +23,32 @@ Describe the pod details
 
 
 ![alt text](<Screenshot from 2025-07-09 10-39-39.png>)
+
+
+Get the logs:
+    Use the following
+
+`kubectl logs nginx-pod`
+
+To access the Nginx web page from our local browser for testing
+Open a new terminal window and run
+
+`kubectl port-forward pod/your-pod-name hostport:pod port`
+            
+(For eg: `kubectl port-forward pod/nginx-pod 8080:80` )
+
+You need to run this in background : `kubectl port-forward pod/ngnx-pod 8080:80 & `
+
+![alt text](<Screenshot from 2025-07-09 14-59-05.png>)
+
+
+![alt text](<Screenshot from 2025-07-09 14-59-39.png>)
+
+
+Delete Pod
+
+`Kubectl delete pod podname`
+
+`kubectl delete pod nginx-pod`
+
+![alt text](<Screenshot from 2025-07-09 15-02-17.png>)
